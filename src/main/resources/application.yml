@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: libraryapi
+  datasource:
+    url: jdbc:postgress://localhost:5432/librarydb
+    username: postgress
+    password: 
+    driver-class-name: org.postgresql.Driver
