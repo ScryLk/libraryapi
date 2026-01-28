@@ -1,0 +1,8 @@
+CREATE TABLE autor(     id BINARY(16) NOT NULL PRIMARY KEY,     nome VARCHAR(100) NOT NULL,     data_nascimento DATE NOT NULL,     nacionalidade VARCHAR(50) NOT NULL );
+SHOW DATABASES;
+CREATE DATABASE libraryapi;
+USE libraryapi;
+CREATE TABLE autor(     id BINARY(16) NOT NULL PRIMARY KEY,     nome VARCHAR(100) NOT NULL,     data_nascimento DATE NOT NULL,     nacionalidade VARCHAR(50) NOT NULL );
+CREATE TABLE livro (     id BINARY(16) NOT NULL PRIMARY KEY,     id_autor BINARY(16) NOT NULL,     isbn VARCHAR(20) NOT NULL,     titulo VARCHAR(150) NOT NULL,     data_publicacao DATE NOT NULL,     genero VARCHAR(30) NOT NULL,     preco NUMERIC(18, 2),     CONSTRAINT fk_autor FOREIGN KEY (id_autor) REFERENCES autor(id) );
+SHOW TABLES;
+select * from autor;
